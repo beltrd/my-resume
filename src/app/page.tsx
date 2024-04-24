@@ -119,22 +119,67 @@ import Footer from "../components/footer";
 
 export default function Home() {
   return (
-    <div className="text-black">
-      {/* <NextSeo
-        title="Home: nine4"
-        description="Welcome to nine4 homepage."
-        canonical="https://nine4-2.vercel.app/"
-        openGraph={{
-          url: "https://nine4-2.vercel.app/",
-        }}
-      /> */}
-      <Head>
-        <title>nine4</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header />
-      <Main />
-      <Footer />
+    <div className="flex min-h-screen text-white">
+      {/* Menu Section */}
+      <div
+        className="bg-gray-800 w-1/4 p-8 flex flex-col justify-between"
+        id="menu"
+      >
+        {/* Social Section */}
+        <div className="flex flex-col justify-between h-1/2" id="social">
+          <div id="logo-top" className="text-2xl mb-4 bg-gray-700 p-4">
+            logo
+          </div>
+          <div id="media-bottom" className="text-sm bg-gray-600 p-2">
+            ln
+          </div>
+        </div>
+        {/* Options Section */}
+        <div className="flex" id="options">
+          <div className="flex-grow bg-gray-700 p-4" id="left">
+            <div id="top" className="hover:text-gray-300 cursor-pointer">
+              Contact
+            </div>
+            <div id="bottom" className="flex justify-between items-end mt-4">
+              <div id="close" className="cursor-pointer bg-gray-500 p-2">
+                X
+              </div>
+              <div
+                id="about"
+                className="hover:text-gray-300 cursor-pointer bg-gray-600 p-2"
+              >
+                about
+              </div>
+            </div>
+          </div>
+          <div
+            id="right"
+            className="hover:text-gray-300 cursor-pointer pl-4 bg-gray-700 p-4"
+          >
+            Projects
+          </div>
+        </div>
+      </div>
+      {/* Content Section */}
+      <div
+        className="w-3/4 bg-black p-8 flex flex-col justify-center"
+        id="content"
+      >
+        {/* Top Right - Social Media Header */}
+        <div className="pl-20">
+          <h1 className="text-6xl font-bold mb-4">Social Media</h1>
+        </div>
+        {/* Center Right - Main Content Headers */}
+        <div className="flex-grow flex flex-col justify-center pl-20">
+          <h2 className="text-5xl mb-4">Web Development</h2>
+          <h3 className="text-4xl mb-4">Social Media</h3>
+          <h4 className="text-3xl">Networking</h4>
+        </div>
+        {/* Bottom Right - Servers */}
+        <div className="pl-20">
+          <h5 className="text-2xl">Servers</h5>
+        </div>
+      </div>
     </div>
   );
 }
